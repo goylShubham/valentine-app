@@ -1,35 +1,50 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import React, { useState } from "react";
+import "./App.css";
+import { AnimatePresence } from "framer-motion";
+import Page1 from "./pages/Home";
+import Page2 from "./pages/ThankYou";
+import Page3 from "./pages/Food";
+import Page4 from "./pages/Dessert";
+import Page5 from "./pages/Movie";
+import Page6 from "./pages/Flower";
+import Page7 from "./pages/Date";
+import { createContext } from "react";
 
-function App() {
-  const [count, setCount] = useState(0)
+const pages = [Page1, Page2, Page7, Page3, Page4, Page5, Page6];
+
+export const AppContext = createContext({state: {
+  date: "",
+  food: "",
+  dessert: "",
+  movie: "",
+}, setState: (value) => {}});
+
+const App = () => {
+  const [pageIndex, setPageIndex] = useState(0);
+  const [state, setState] = useState({
+    date: "",
+    food: "",
+    dessert: "",
+    movie: "",
+  });
+
+  const nextPage = () => {
+    if (pageIndex < pages.length - 1) {
+      setPageIndex(pageIndex + 1);
+    }
+  };
+
+  const CurrentPage = pages[pageIndex];
 
   return (
-    <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
-  )
-}
+    <div className="h-screen flex items-center justify-center">
+      <AnimatePresence mode="wait">
+        <AppContext.Provider value={{ state, setState }}>
+          <CurrentPage key={pageIndex} nextPage={nextPage} />
+        </AppContext.Provider>
+      </AnimatePresence>
+    </div>
+  );
+};
 
-export default App
+export default App;
