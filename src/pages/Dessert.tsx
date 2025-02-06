@@ -1,8 +1,8 @@
 import React, { useState } from "react";
-import waffle from "../assets/waffle.jpg";
-import kalaJaamun from "../assets/kala-jaamun.jpg";
-import iceCream from "../assets/icecream.jpg";
-import cupCake from "../assets/cupcake.jpg";
+import waffle from "../assets/waffle.webp";
+import kalaJaamun from "../assets/kala-jaamun.webp";
+import iceCream from "../assets/icecream.webp";
+import cupCake from "../assets/cupcake.webp";
 import { motion } from "framer-motion";
 import { useContext } from "react";
 import { AppContext } from "../App";

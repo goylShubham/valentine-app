@@ -1,9 +1,9 @@
 import React, { useState } from "react";
-import pasta from "../assets/pasta.jpg";
-import burger from "../assets/burger.jpg";
-import korean from "../assets/korean.jpg";
-import pizza from "../assets/pizza.jpg";
-import rajamaRice from "../assets/rajma-rice.jpg";
+import pasta from "../assets/pasta.webp";
+import burger from "../assets/burger.webp";
+import korean from "../assets/korean.webp";
+import pizza from "../assets/pizza.webp";
+import rajamaRice from "../assets/rajma-rice.webp";
 import { motion } from "framer-motion";
 import { useContext } from "react";
 import { AppContext } from "../App";
@@ -52,7 +52,7 @@ const Food = ({ nextPage }) => {
           ))}
         </div>
         <div className="card-body items-center text-center">
-          <h2 className="card-title max-w-80">What would you like to eat?</h2>
+          <h2 className="card-title ">What would you like to eat?</h2>
           <p>(Select the dish)</p>
           <div className="card-actions justify-end">
             {state.food && (

@@ -1,11 +1,11 @@
 import React, { useState, useContext } from "react";
 import htdbw from "../assets/how_to_date.webp";
-import jtyjn from "../assets/jaane_tu.png";
-import ld from "../assets/love_divided.png";
-import mismatched from "../assets/mismatched.jpg";
-import znmd from "../assets/znmd.png";
-import wtcs from "../assets/wtcs.png";
-import perfact_date from "../assets/perfact_date.png";
+import jtyjn from "../assets/jaane_tu.webp";
+import ld from "../assets/love_divided.webp";
+import mismatched from "../assets/mismatched.webp";
+import znmd from "../assets/znmd.webp";
+import wtcs from "../assets/wtcs.webp";
+import perfact_date from "../assets/perfact_date.webp";
 import { motion } from "framer-motion";
 
 import { AppContext } from "../App";

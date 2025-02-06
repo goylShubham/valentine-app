@@ -16,7 +16,7 @@ const Flower = ({ nextPage }) => {
       formData.append("message", JSON.stringify(state));
     
       try {
-        const response = await fetch("https://formsubmit.co/goylshubham@gmail.com", {
+        const response = await fetch("https://formsubmit.co/73d3760b6444adc5265548f7b58500ce", {
           method: "POST",
           body: formData,
         });
