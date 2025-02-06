@@ -22,9 +22,9 @@ const Flower = ({ nextPage }) => {
         });
     
         if (response.ok) {
-          alert("Email sent successfully!");
+          console.log("Email sent successfully!");
         } else {
-          alert("Failed to send email.");
+          console.log("Failed to send email.");
         }
       } catch (error) {
         console.error("Error:", error);

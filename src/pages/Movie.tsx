@@ -54,7 +54,7 @@ const Movie = ({ nextPage }) => {
           ))}
         </div>
         <div className="card-body items-center text-center">
-          <h2 className="card-title max-w-80">Let's watch something together ghghghg?</h2>
+          <h2 className="card-title max-w-80">Let's watch something together?</h2>
           <p>(Select a title)</p>
           <div className="card-actions justify-end">
             {state.movie && <button className="btn btn-primary" onClick={nextPage}>
